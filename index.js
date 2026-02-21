@@ -2,7 +2,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const { expressjwt } = require('express-jwt');
 
-const auth = expressjwt({ secret: process.env.JWT_SECRET, algorithms: ['HS256'] });
+const auth = expressjwt({ secret: "./.env.JWT_SECRET", algorithms: ['HS256'] });
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
